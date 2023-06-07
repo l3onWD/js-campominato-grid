@@ -32,7 +32,7 @@ console.log('----------- INIT -----------');
 
 //*** DOM ELEMENTS ***//
 const difficultyElem = document.getElementById('game-difficulty');
-const playFormElem = document.getElementById('game-play-form');
+const playFormElem = document.getElementById('game-form');
 const gridElem = document.getElementById('game-grid');
 
 

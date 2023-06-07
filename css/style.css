@@ -98,13 +98,13 @@ select {
 }
 
 
-/*** GAME HEADER ***/
-#game-header {
+/*** HEADER ***/
+header {
     display: flex;
     justify-content: space-between;
 }
 
-#game-header > * {
+header > * {
     display: flex;
     align-items: center;
 }
@@ -116,7 +116,7 @@ select {
 }
 
 
-/*** GAME CONTENT ***/
+/*** MAIN CONTENT ***/
 main {
     display: flex;
     align-items: center;
