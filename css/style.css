@@ -85,26 +85,33 @@ body {
 
 
 /*** GAME HEADER ***/
-#game-header .container {
+#game-header {
     display: flex;
     justify-content: space-between;
 }
 
-.header-left,
-.header-right {
+#game-header > * {
     display: flex;
     align-items: center;
 }
 
 /* Logo */
 .logo {
-    width: 70px;
+    width: 65px;
+    display: block;
 }
 
 
 /*** GAME CONTENT ***/
 #game-content {
     background-color: var(--col-cyan);
+}
+
+
+/*** GAME FOOTER ***/
+#game-footer {
+    display: flex;
+    align-items: center;
 }
 
 
