@@ -1,7 +1,11 @@
 /* -----------------------------------------
 * VARIABLES
 -------------------------------------------*/
-
+:root {
+    /* Palette */
+    --col-cyan: #00ffff;
+    --col-primary: #4831f9;
+}
 
 
 /* -----------------------------------------
@@ -22,12 +26,58 @@ body {
 }
 
 
+/* -----------------------------------------
+* UTILS
+-------------------------------------------*/
+/*** MARGIN ***/
+.ml-1 {
+    margin-left: 0.5rem;
+}
+
+.ml-2 {
+    margin-left: 1rem;
+}
+
 
 /* -----------------------------------------
 ? ELEMENTS
 -------------------------------------------*/
-/***  ***/
+/*** BUTTONS ***/
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
 
+    padding: 6px 20px;
+    border-radius: 6px;
+}
+
+.btn.btn-primary {
+    background-color: var(--col-primary);
+    color: #fff;
+}
+
+
+/*** HEADER ***/
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    width: 70px;
+}
 
 
 
