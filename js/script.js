@@ -30,13 +30,14 @@ console.log('----------- INIT -----------');
 
 //*** DOM ELEMENTS ***//
 const difficultyElem = document.getElementById('game-difficulty');
-const playBtn = document.getElementById('game-play-btn');
+const playFormElem = document.getElementById('game-play-form');
 const gridElem = document.getElementById('game-grid');
+
 
 // ! Log Elements
 console.log('### Elementi DOM:');
 console.log('Select: ' + difficultyElem);
-console.log('Button: ' + playBtn);
+console.log('Form: ' + playFormElem);
 console.log('Grid: ' + gridElem);
 
 
@@ -45,6 +46,10 @@ console.log('Grid: ' + gridElem);
 -------------------------------------------*/
 console.log('----------- LOGIC -----------');
 
+//*** CLICK PLAY ***//
+playFormElem.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+});
 
 
 
