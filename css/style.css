@@ -5,6 +5,8 @@
     /* Palette */
     --col-cyan: #00ffff;
     --col-primary: #4831f9;
+    --col-secondary: #ff0000;
+    --col-light: #faebd7;
 
     /* Layout */
     --header-height: 70px;
@@ -133,12 +135,26 @@ body {
     flex-wrap: wrap;
 }
 
-#game-grid .game-cell {
+.game-cell {
     width: calc(100% / 10);
     height: calc(100% / 10);
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid #000;
-    background-color: antiquewhite;
+    background-color: var(--col-light);
+
+    cursor: pointer;
+}
+
+.game-cell:hover {
+border-color: var(--col-secondary);
+}
+
+.game-cell.clicked {
+    background-color: var(--col-primary);
+    color: #fff;
 }
 
 
