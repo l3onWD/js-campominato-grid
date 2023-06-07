@@ -32,6 +32,9 @@ const gridElem = document.getElementById('game-grid');
 
 //*** PARAMETERS ***//
 const gridSize = 400;
+const cellsPerRowEasy = 10;
+const cellsPerRowMedium = 9;
+const cellsPerRowHard = 7;
 
 
 //*** SET GRID SIZE ***//
@@ -71,17 +74,17 @@ playFormElem.addEventListener('submit', (ev) => {
     switch (difficulty) {
         // Easy
         case 1:
-            cellsPerRow = 10;
+            cellsPerRow = cellsPerRowEasy;
             break;
 
         // Medium
         case 2:
-            cellsPerRow = 9;
+            cellsPerRow = cellsPerRowMedium;
             break;
 
         // Hard
         default:
-            cellsPerRow = 7;
+            cellsPerRow = cellsPerRowHard;
     }
 
     
