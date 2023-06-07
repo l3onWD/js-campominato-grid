@@ -1,6 +1,12 @@
 /* -----------------------------------------
 * FUNCTIONS
 -------------------------------------------*/
+/**
+ * Create a squared cell.
+ * @param {Number} size - the size of the cell in px
+ * @param {Number} number - the number to show as content
+ * @returns {Node}
+ */
 const createCell = (size, number) => {
 
     // Create node
