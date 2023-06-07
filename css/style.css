@@ -58,6 +58,8 @@ body {
 
 .layout-main {
     height: calc(100vh - (var(--header-height) + var(--footer-height)));
+
+    overflow: auto;
 }
 
 
@@ -112,6 +114,31 @@ body {
 #game-footer {
     display: flex;
     align-items: center;
+}
+
+
+/*** GAME CONTENT ***/
+#game-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*** GAME GRID ***/
+#game-grid {
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#game-grid .game-cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+
+    border: 2px solid #000;
+    background-color: antiquewhite;
 }
 
 
