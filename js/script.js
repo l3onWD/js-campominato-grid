@@ -28,7 +28,16 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 console.log('----------- INIT -----------');
 
 
-//***  ***//
+//*** DOM ELEMENTS ***//
+const difficultyElem = document.getElementById('game-difficulty');
+const playBtn = document.getElementById('game-play-btn');
+const gridElem = document.getElementById('game-grid');
+
+// ! Log Elements
+console.log('### Elementi DOM:');
+console.log('Select: ' + difficultyElem);
+console.log('Button: ' + playBtn);
+console.log('Grid: ' + gridElem);
 
 
 /* -----------------------------------------
