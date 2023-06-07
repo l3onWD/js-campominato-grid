@@ -48,7 +48,35 @@ console.log('----------- LOGIC -----------');
 
 //*** CLICK PLAY ***//
 playFormElem.addEventListener('submit', (ev) => {
+
+    // Prevent submit event
     ev.preventDefault();
+
+
+    //*** GET DIFFICULTY ***//
+    let numberOfCells;
+    const difficulty = parseInt(difficultyElem.value);
+
+    switch (difficulty) {
+        // Easy
+        case 1:
+            numberOfCells = 100;
+            break;
+
+        // Medium
+        case 2:
+            numberOfCells = 81;
+            break;
+
+        // Hard
+        default:
+            numberOfCells = 49;
+    }
+
+    console.log(numberOfCells);
+
+
+
 });
 
 
