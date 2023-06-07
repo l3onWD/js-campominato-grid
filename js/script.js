@@ -6,12 +6,13 @@ const createCell = (size, number) => {
     // Create node
     const cell = document.createElement('div');
 
+    // Set size
+    cell.style.width = size + 'px';
+    cell.style.height = size + 'px';
+
     // Set properties
     cell.classList.add('game-cell');
     cell.append(number);
-
-    cell.style.width = size + 'px';
-    cell.style.height = size + 'px';
     
     return cell;
 }
@@ -33,11 +34,20 @@ const gridElem = document.getElementById('game-grid');
 const gridSize = 400;
 
 
-// ! Log Elements
+//*** SET GRID SIZE ***//
+gridElem.style.width = gridSize + 'px';
+gridElem.style.height = gridSize + 'px';
+
+
+// ! Log
 console.log('### Elementi DOM:');
 console.log('Select: ' + difficultyElem);
 console.log('Form: ' + playFormElem);
 console.log('Grid: ' + gridElem);
+console.log('---------------');
+console.log('### Dimensioni griglia:');
+console.log('Larghezza: ' + gridSize + 'px');
+console.log('Altezza: ' + gridSize + 'px');
 console.log('----------- DONE -----------');
 
 
