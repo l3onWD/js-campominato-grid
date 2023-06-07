@@ -9,8 +9,8 @@
     --col-light: #faebd7;
 
     /* Layout */
-    --header-height: 70px;
-    --footer-height: 50px;
+    --layout-top: 70px;
+    --layout-bottom: 50px;
 }
 
 
@@ -61,15 +61,15 @@ select {
 * LAYOUT
 -------------------------------------------*/
 .layout-top {
-    height: var(--header-height);
+    height: var(--layout-top);
 }
 
 .layout-bottom {
-    height: var(--footer-height);
+    height: var(--layout-bottom);
 }
 
 .layout-main {
-    height: calc(100vh - (var(--header-height) + var(--footer-height)));
+    height: calc(100vh - (var(--layout-top) + var(--layout-bottom)));
 
     overflow: auto;
 }
@@ -117,29 +117,20 @@ select {
 
 
 /*** GAME CONTENT ***/
-#game-content {
-    background-color: var(--col-cyan);
-}
-
-
-/*** GAME FOOTER ***/
-#game-footer {
-    display: flex;
-    align-items: center;
-}
-
-
-/*** GAME CONTENT ***/
-#game-content {
+main {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--col-cyan);
 }
+
 
 /*** GAME GRID ***/
 #game-grid {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Cells */
@@ -162,6 +153,12 @@ select {
     color: #fff;
 }
 
+
+/*** FOOTER ***/
+footer {
+    display: flex;
+    align-items: center;
+}
 
 /* -----------------------------------------
 ? RESPONSIVE
