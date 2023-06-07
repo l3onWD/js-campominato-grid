@@ -133,6 +133,13 @@ main {
     justify-content: center;
 }
 
+/* Start Message */
+#game-grid > p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 /* Cells */
 .game-cell {
     display: flex;
