@@ -25,7 +25,7 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 /* -----------------------------------------
 * FUNCTIONS
 -------------------------------------------*/
-const createCell = (number) => {
+const createCell = (size, number) => {
 
     // Create node
     const cell = document.createElement('div');
@@ -33,6 +33,9 @@ const createCell = (number) => {
     // Set properties
     cell.classList.add('game-cell');
     cell.append(number);
+
+    cell.style.width = size + 'px';
+    cell.style.height = size + 'px';
     
     return cell;
 }
@@ -48,6 +51,10 @@ console.log('----------- INIT -----------');
 const difficultyElem = document.getElementById('game-difficulty');
 const playFormElem = document.getElementById('game-play-form');
 const gridElem = document.getElementById('game-grid');
+
+
+//*** PARAMETERS ***//
+const gridSize = 400;
 
 
 // ! Log Elements
@@ -70,33 +77,38 @@ playFormElem.addEventListener('submit', (ev) => {
 
 
     //*** GET DIFFICULTY ***//
-    let numberOfCells;
+    let cellsPerRow;
     const difficulty = parseInt(difficultyElem.value);
 
     switch (difficulty) {
         // Easy
         case 1:
-            numberOfCells = 100;
+            cellsPerRow = 10;
             break;
 
         // Medium
         case 2:
-            numberOfCells = 81;
+            cellsPerRow = 9;
             break;
 
         // Hard
         default:
-            numberOfCells = 49;
+            cellsPerRow = 7;
     }
 
     
     //*** POPULATE GRID ***//
-    gridElem.innerHTML = '';// Delete all previous cells
+    // Calculate Grid data
+    let cellsTotalNumber = cellsPerRow * cellsPerRow;
+    let cellsSize = gridSize / cellsPerRow;
+
+    // Delete all previous cells
+    gridElem.innerHTML = '';
 
     // Create all cell based on difficulty
-    for (let i = 1; i <= numberOfCells; i++) {
+    for (let i = 1; i <= cellsTotalNumber; i++) {
        
-        const cell = createCell(i);
+        const cell = createCell(cellsSize, i);
         
         //*** CLICK CELL ***//
         cell.addEventListener('click', () => {
