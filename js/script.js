@@ -100,7 +100,13 @@ playFormElem.addEventListener('submit', (ev) => {
         
         //*** CLICK CELL ***//
         cell.addEventListener('click', () => {
-            // TODO cell click logic
+            
+            // Print content cell
+            console.log(cell.innerText);
+
+            // Change cell color
+            cell.classList.add('clicked');
+
         });
 
         // Append cell inside grid
