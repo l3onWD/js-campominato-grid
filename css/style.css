@@ -135,6 +135,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* Cells */
 .game-cell {
     width: calc(100% / 10);
     height: calc(100% / 10);
@@ -149,7 +150,7 @@ body {
 }
 
 .game-cell:hover {
-border-color: var(--col-secondary);
+    border-color: var(--col-secondary);
 }
 
 .game-cell.clicked {

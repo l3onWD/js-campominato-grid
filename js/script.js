@@ -23,14 +23,6 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
         - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
 /* -----------------------------------------
-! DEBUG
--------------------------------------------*/
-console.log('----------- DEBUG -----------');
-
-console.log('JS OK!');// Check if JS is linked to the page
-
-
-/* -----------------------------------------
 * INIT
 -------------------------------------------*/
 console.log('----------- INIT -----------');
