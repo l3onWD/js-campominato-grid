@@ -18,9 +18,11 @@
         - _"Creo una cella"_
         - Appendo la cella alla griglia
         - collego l'evento click alla cella
+    - **FINE**
 - **QUANDO** _"premo su una cella"_
     - Stampo il suo contenuto
     - Cambio il colore della cella
+    - **FINE**
 - **Creo una cella** _"dato un numero"_
     - Creo un elemento
     - Appendo il numero all'elemento

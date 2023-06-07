@@ -23,6 +23,22 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
         - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
 /* -----------------------------------------
+* FUNCTIONS
+-------------------------------------------*/
+const createCell = (number) => {
+
+    // Create node
+    const cell = document.createElement('div');
+
+    // Set properties
+    cell.classList.add('game-cell');
+    cell.append(number);
+    
+    return cell;
+}
+
+
+/* -----------------------------------------
 * INIT
 -------------------------------------------*/
 console.log('----------- INIT -----------');
@@ -73,9 +89,23 @@ playFormElem.addEventListener('submit', (ev) => {
             numberOfCells = 49;
     }
 
-    console.log(numberOfCells);
+    
+    //*** POPULATE GRID ***//
+    gridElem.innerHTML = '';// Delete all previous cells
 
+    // Create all cell based on difficulty
+    for (let i = 1; i <= numberOfCells; i++) {
+       
+        const cell = createCell(i);
+        
+        //*** CLICK CELL ***//
+        cell.addEventListener('click', () => {
+            // TODO cell click logic
+        });
 
+        // Append cell inside grid
+        gridElem.appendChild(cell);
+    }
 
 });
 
